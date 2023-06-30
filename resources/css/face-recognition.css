@@ -1,0 +1,33 @@
+div.recognition {
+    display: grid;
+}
+div.recognition canvas {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+div.recognition video {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+
+/* ======================================== Face Register ======================================== */
+
+div.face-recognition.register div.register {
+    border-radius: 80px;
+}
+div.face-recognition.register div.recognition {
+    width: 1000px !important; 
+    height: 720px !important;
+}
+
+
+/* ======================================== Face Clock ======================================== */
+div.face-recognition.clock div.recognition {
+    width: 1230px !important; 
+    height: 920px !important;
+}
+div.face-recognition.clock div.logs .box {
+    width: 400px !important; 
+    height: 800px !important;
+}

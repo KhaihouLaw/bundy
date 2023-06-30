@@ -1,0 +1,165 @@
+.sidebar ul li,
+.sidebar ul li a, 
+.sidebar ul li svg {
+    color: rgb(112, 112, 112) !important;
+}
+
+.sidebar-nav .nav-group-toggle::after {
+    filter: brightness(0);
+}
+.sidebar-nav .nav-group.show {
+    background: none;
+    background-color: rgba(128, 128, 128, 0.137);
+}
+
+.sidebar-nav .nav-item:hover {
+    background-color: rgba(128, 128, 128, 0.534);
+}
+
+.sidebar-nav .nav-item:hover .nav-link {
+    color: whitesmoke !important;
+}
+
+i.nav-icon {
+    color: gray !important;
+}
+
+.custom-btn-primary {
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: whitesmoke;
+    background-color: rgb(0, 132, 255);
+}
+.custom-btn-danger {
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: red;
+    background-color: rgb(0, 132, 255);
+}
+
+/* ============================== Custom Modal Style for SweetAlert Plugin ============================== */
+.custom-alert {
+    border-radius: 150px !important;
+    width: 250px !important;
+    height: 250px !important;
+}
+.custom-loading-icon {
+    border: none !important;
+}
+.custom-loading-title {
+    margin-top: -60px !important;
+}
+.custom-success-title,
+.custom-warning-title,
+.custom-failed-title {
+    margin-top: -40px !important;
+}
+.custom-warning-title {
+    color: orange !important;
+    font-size: 22px !important;
+}
+
+/* ============================== DATA TABLE ============================== */
+
+table, tbody, td, tfoot, th, thead, tr {
+    border: none !important;
+}
+table#datatable td {
+    vertical-align: middle;
+}
+select[name="lr-datatable_length"], select.form-select {
+    padding: 5px 30px 5px 5px !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+    border: 2px solid blue !important;
+    border-radius: 10px !important;
+}
+.dataTables_filter input {
+    margin-left: 15px !important;
+    border: 2px solid blue !important;
+    border-radius: 10px !important;
+}
+div.dataTables_length label, div.dataTables_filter label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.dt-buttons button {
+    border-radius: 10px !important;
+    background-color: rgba(0, 102, 255, 0.493);
+    color: whitesmoke;
+    font-weight: bolder;
+    width: 70px;
+    height: 40px;
+}
+li.paginate_button.active a {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: white !important;
+    border: 1px solid whitesmoke !important;
+    background-color: whitesmoke !important;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke ), color-stop(100%, whitesmoke ))!important;
+    background: -webkit-linear-gradient(top, whitesmoke  0%, whitesmoke  100%)!important;
+    background: -moz-linear-gradient(top, whitesmoke  0%, whitesmoke  100%)!important;
+    background: -ms-linear-gradient(top, whitesmoke  0%, whitesmoke  100%)!important;
+    background: -o-linear-gradient(top, whitesmoke  0%, whitesmoke  100%)!important;
+    background: linear-gradient(to bottom, whitesmoke  0%, whitesmoke  100%)!important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    border-radius: 5px !important;
+}
+
+
+/* ============================== ATTENDANCE SUMMARY ============================== */
+/* @remind put this in separate file */
+
+.attendance-summary .calendar {
+    max-width: 900px;
+    margin: 40px auto;
+}
+.attendance-summary .table-container {
+    min-width: 890px !important;
+}
+.attendance-summary table.departments.not-responsive {
+    width: 890px !important;
+    table-layout: fixed;
+}
+.attendance-summary table.departments tr.dtrg-start {
+    cursor: pointer;
+}
+.attendance-summary table.departments td {
+    white-space: normal !important;
+    vertical-align: middle;
+}
+/* customize calendar */
+.attendance-summary div.fc-dayGridMonth-view {
+    border: 2px solid blue !important;
+    border-radius: 30px;
+    padding: 35px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.attendance-summary a {
+    text-decoration: none;
+}
+table.fc-col-header th {
+    padding-bottom: 40px;
+}
+table.fc-col-header th div a {
+    color: gray !important;
+}
+/* customize data table */
+.attendance-summary .modal table {
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+}
+.attendance-summary .modal table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+.attendance-summary .modal table tbody tr:last-child td:first-child,
+.attendance-summary .modal table tbody tr:last-child th:first-child {
+    border-bottom-left-radius: 20px;
+}
+

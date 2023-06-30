@@ -1,0 +1,23 @@
+
+.toggle, .toggle-on, .toggle-off { 
+    border-radius: 20rem; 
+    color: whitesmoke;
+    font-weight: bolder;
+    margin: 5px;
+}
+
+.toggle .toggle-handle { 
+    border-radius: 20rem; 
+}
+
+.tms-btn {
+    display: flex !important; 
+    line-height: 1rem !important; 
+    font-weight: 900 !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.clock-out-btn {
+    transition: all 0.8s !important;
+}

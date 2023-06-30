@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.register-form .first-name:focus, .register-form .first-name:active,
+.register-form .middle-name:focus, .register-form .middle-name:active,
+.register-form .last-name:focus, .register-form .last-name:active,
+.register-form .birth-date:focus, .register-form .birth-date:active,
+.register-form .department:focus, .register-form .department:active,
+.register-form .email:focus, .register-form .email:active,
+.register-form .password:focus, .register-form .password:active,
+.register-form .password-confirm:focus, .register-form .password-confirm:active {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}

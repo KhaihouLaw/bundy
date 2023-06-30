@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+}
+/*NAvigation bar*/
+.navbar {
+    overflow: hidden;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 5px solid #f5f5f5;
+    z-index: 2;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3vw;
+    padding: 0;
+    margin-left: 100px;
+}
+.p1 {
+    color: black;
+}
+.p2 {
+    color: #58a5f0;
+}
+.navbar button {
+    float: right;
+    display: block;
+    color: white;
+    font-size: 1.1vw;
+    padding: 10px 60px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-5%, -50%);
+    border: transparent;
+    background-color: #0277bd;
+    border-radius: 5px;
+    font: bold;
+    margin-right: 100px;
+}
+.navbar button:hover {
+    background: #58a5f0;
+    color: #ffffff;
+}
+
+/* clock */
+.date_time_Container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+.clock_container {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+}
+.time {
+    background: #ffffff;
+    color: rgb(12, 12, 12);
+    text-align: center;
+    width: auto;
+    border: 7px solid transparent;
+    padding: 85px;
+    /*   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+   */
+    float: left;
+}
+.hms {
+    font-size: 6vw;
+    font-weight: 500;
+}
+.ampm {
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+.date {
+    font-size: 1.5vw;
+}
+
+/* CALENDAR  */
+
+.dycalendar-container {
+    display: inline-block;
+    border: 1px solid #eee;
+}
+
+.dycalendar-container.round-edge {
+    border-radius: 5%;
+    -o-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -webkit-border-radius: 5%;
+}
+
+/*================================== DAY CALENDAR ========================*/
+/*
+  * day calendar style
+  *-------------------------------------------------*/
+.dycalendar-day-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.dycalendar-day-container div {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+/* .dycalendar-day-container .dycalendar-span-day {
+    font-size: 110%;
+  }
+  
+  .dycalendar-day-container .dycalendar-span-date {
+    font-size: 250%;
+  }
+  
+  .dycalendar-day-container .dycalendar-span-month-year {
+    font-size: 90%;
+  } */
+
+/*================================== DAY CALENDAR ENDS HERE ===============*/
+
+/*================================== MONTH CALENDAR DEFAULT ========================*/
+
+/*
+  * month calendar style
+  *-------------------------------------------------*/
+.dycalendar-month-container {
+    padding: 50px;
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.dycalendar-month-container div {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.dycalendar-month-container .dycalendar-header {
+    position: relative;
+    font-size: 1.5vw;
+    font-weight: bolder;
+}
+
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+
+.dycalendar-month-container
+    .dycalendar-header
+    .dycalendar-prev-next-btn.prev-btn {
+    left: 0;
+}
+
+.dycalendar-month-container
+    .dycalendar-header
+    .dycalendar-prev-next-btn.next-btn {
+    right: 0;
+}
+
+.dycalendar-month-container .dycalendar-span-month-year {
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dycalendar-month-container .dycalendar-body table tr td {
+    padding: 5px;
+}
+
+.dycalendar-month-container .dycalendar-today-date,
+.dycalendar-month-container .dycalendar-target-date {
+    background-color: #58a5f0;
+    color: #fff;
+    border-radius: 2px;
+}
+
+/*================================== MONTH CALENDAR ENS HERE ===============*/
+
+/* CALENDAR STYLE CSS */
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+.box {
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    padding: 100px;
+    padding-bottom: 40px;
+}
+.container {
+    position: relative;
+    width: auto;
+    min-height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+#calendar {
+    width: 100%;
+    padding: 20px;
+}
+#calendar table {
+    width: 100%;
+    margin-top: 40px;
+    border-spacing: 5px;
+}
+#calendar table td {
+    padding: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1vw;
+}
+#calendar table td:hover {
+    background: hsl(204deg 63% 97%);
+    color: black !important;
+}
+
+#calendar table tr:nth-child(1) td {
+    color: #373737;
+    font-size: 1vw;
+}
+
+#calendar table tr:nth-child(1) td:hover {
+    background: hsl(204deg 63% 97%);
+    color: #ffffff;
+}
+.dycalendar-target-date {
+    background: #fff;
+    color: #111;
+}
+.dycalendar-prev-next-btn.prev-btn {
+    background: transparent;
+    color: rgb(221, 221, 221);
+    width: 44px;
+    height: auto;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dycalendar-prev-next-btn.prev-btn:hover {
+    background: hsl(204deg 63% 97%);
+    color: #373737;
+}
+.dycalendar-prev-next-btn.next-btn {
+    background: transparent;
+    color: rgb(221, 221, 221);
+    width: 44px;
+    height: auto;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dycalendar-prev-next-btn.next-btn:hover {
+    background: hsl(204deg 63% 97%);
+    color: #373737;
+}
+
+.dycalendar-span-month-year {
+    color: #373737;
+}
+h3,
+a {
+    padding-top: 50px;
+    color: rgb(16, 191, 235);
+    text-align: center;
+    text-emphasis: none;
+}
+
+/* ANNOUNCEMENT */
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: 100px;
+    overflow: hidden;
+}
+
+.announcement {
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+/* Slides */
+.mySlides {
+    display: none;
+    padding: 100px;
+    text-align: center;
+}
+.aligned {
+    display: flex;
+    align-items: center;
+}
+.aligned img {
+    height: 100px;
+    width: 100px;
+}
+
+.aligned span {
+    padding: 10px;
+    font-size: 1vw;
+    font-weight: bold;
+    color: #58a5f0;
+}
+
+/* Next & previous buttons */
+.slides_prev,
+.slides_next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #ddd;
+    font-weight: bold;
+    font-size: 2.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.slides_next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.slides_prev:hover,
+.slides_next:hover {
+    background-color: li;
+    color: gray;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 100px;
+    background-color: hsl(204deg 63% 97%);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+.mySlides_content {
+    font-size: 1vw;
+    text-align: justify;
+    padding: 0px 40px 0px 40px;
+    margin: 0px;
+}
+
+/* Weather Forecast */
+.weather_forcast_container {
+    width: 100%;
+    padding: 50px;
+    height: 100%;
+    display: content;
+    overflow: hidden;
+    background-color: hsl(204deg 63% 97%);
+}
+.weather_forcast_container h1 {
+    font-size: 1.5vw;
+    padding-left: 50px;
+}
+.weatherDiv {
+    align-self: center;
+    padding: 0 150px 60px 150px;
+}
+/* CHED NEWS TICKER */
+.news_Container {
+    padding: 50px 0 50px 0;
+    background-color: hsl(204deg 63% 97%);
+}
+.news_Container h1 {
+    font-size: 1.5vw;
+    padding-left: 100px;
+}
+.news_div_container {
+    justify-content: center;
+    margin: 100px;
+    margin-top: 0;
+}
+.news_div {
+    display: flex;
+    width: auto;
+    justify-content: center;
+}
+.newscontent {
+    display: flex;
+    align-items: center;
+    border: 2px solid #0277bd;
+    margin: 40px 40px 40px 100px;
+}
+
+.news_image {
+    height: 100%;
+}
+
+.news_image img {
+    height: 100%;
+    object-fit: cover;
+    width: 280px;
+}
+.news_image a {
+    cursor: pointer;
+}
+.news_description {
+    height: 100%;
+    page-break-after: 10px;
+}
+.news_description p {
+    color: #373737;
+    font-size: 1vw;
+    margin: 0;
+    text-align: justify;
+    padding: 10px;
+}
+.news_description .p1 {
+    color: gray;
+}
+.news_description .p2 {
+    color: #58a5f0;
+}
+footer {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+p.copyright {
+    position: absolute;
+    width: 100%;
+    color: #373737;
+    line-height: 40px;
+    font-size: 1.3em;
+    text-align: center;
+    bottom: 0;
+}

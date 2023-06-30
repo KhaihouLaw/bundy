@@ -1,0 +1,239 @@
+/* General Styles */
+
+.vfc-dayNames span, .vfc-top-date.vfc-center span, .vfc-week span {
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 15px !important;
+}
+.vfc-dayNames span, .vfc-top-date.vfc-center span { 
+    text-transform: uppercase;
+}
+.vfc-dayNames span {
+    color: gray !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+}
+.vfc-top-date.vfc-center span {
+    font-weight: 900;
+}
+.vfc-week .vfc-day span.vfc-span-day.vfc-marked {
+    color: whitesmoke;
+}
+.add-timesheet-modal .ts-input div {
+    display: flex;
+    justify-content: space-between;
+}
+.add-timesheet-modal .ts-input input {
+    background-color: transparent;
+    border: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.add-timesheet-modal .ts-input input:focus,
+.add-timesheet-modal .ts-input input:active {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.add-timesheet-modal .ts-input span + div {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 5px;
+}
+.add-timesheet-modal .ts-input span + div i {
+    font-size: 20px;
+    margin-right: 5px;
+    margin-left: 2px;
+}
+.active-filter {
+    background-color: lightblue;
+}
+
+
+/* filtered by day */
+
+.ts-day-tbl, .ts-day-tbl th, .ts-day-tbl td {
+    border: 2px solid lightblue;
+    border-collapse: collapse;
+}
+.ts-day-tbl tbody td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.ts-day-tbl tbody td span,
+.ts-modif-tbl tbody td span {
+    display: flex;
+    flex-direction: column;
+}
+.ts-day-tbl thead .date th,
+.ts-modif-tbl thead .date th {
+    padding: 5px;
+}
+/* modification table */
+.ts-modif-tbl, .ts-modif-tbl th, .ts-modif-tbl td {
+    border: 2px solid rgba(36, 85, 100, 0.5);
+    border-collapse: collapse;
+}
+.ts-modif-tbl tbody td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* filtered by week */
+
+.small-calendar.week-filtered .start-date {
+    background-color: rgb(29, 127, 255) !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    color: whitesmoke !important;
+}
+.small-calendar.week-filtered .start-date::after {
+    background-color: rgb(29, 127, 255) !important;
+    margin-left: 30px !important;
+    width: 12px;
+}
+.small-calendar.week-filtered .end-date {
+    background-color: rgb(29, 127, 255) !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    color: whitesmoke !important;
+}
+.small-calendar.week-filtered .end-date::after {
+    background-color: rgb(29, 127, 255) !important;
+    width: 15%;
+}
+.small-calendar.week-filtered .vfc-week .vfc-day span.vfc-span-day.vfc-marked {
+    background-color: rgba(36, 65, 102, 0.733) !important;
+}
+.small-calendar.week-filtered .vfc-week .vfc-day span.vfc-span-day.vfc-marked::before {
+    background-color: rgb(29, 127, 255) !important;
+}
+.small-calendar.week-filtered .vfc-week .vfc-day .vfc-base-start, .vfc-week .vfc-day .vfc-base-end {
+    background: none !important;
+}
+
+
+/* common small calendar styles */
+
+.small-calendar .vfc-main-container {
+    border-radius: 20px !important;
+    border-color: rgb(0, 174, 255) !important;
+    border-width: 1px !important;
+    height: 320px !important;
+}
+.small-calendar .vfc-top-date.vfc-center {
+    margin-top: 15px !important;
+}
+.small-calendar .fa-arrow-right {
+    margin-right: 15px !important;
+    margin-top: 9px;
+}
+.small-calendar .fa-arrow-left {
+    margin-left: 15px !important;
+    margin-top: 9px;
+}
+
+
+/* filtered by month */
+
+.calendar-month-filtered .vfc-main-container {
+    /* box-shadow: none !important; */
+    min-width: 950px !important;
+    border-radius: 20px;
+}
+.calendar-month-filtered .vfc-arrow-right, 
+.calendar-month-filtered .vfc-arrow-left {
+    display: none !important;
+}
+.calendar-month-filtered .vfc-dayNames {
+    margin-top: 15px;
+}
+.calendar-month-filtered .vfc-week {
+    height: 100px !important;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.178);
+}
+.calendar-month-filtered .vfc-week:first-child {
+    border-top: 1px solid rgba(128, 128, 128, 0.178);
+}
+.calendar-month-filtered .vfc-week div {
+    border-right: 1px solid rgba(128, 128, 128, 0.178);
+}
+.calendar-month-filtered .vfc-week div:first-child {
+    border-left: 1px solid rgba(128, 128, 128, 0.178);
+}
+.calendar-month-filtered .vfc-week .vfc-day span.vfc-span-day,
+.calendar-month-filtered .vfc-week .vfc-day span.vfc-span-day.vfc-marked {
+    margin-top: 3px !important;
+    margin-right: 5px !important;
+}
+.calendar-month-filtered .vfc-week .vfc-day span.vfc-span-day.vfc-today {
+    margin-top: -3px !important;
+    width: 100%;
+    height: 110% !important;
+    border-radius: 0px !important;
+    text-align: right !important;
+    padding-right: 14px !important;
+    padding-top: 6px;
+    /* pointer-events: none !important; */
+    background-color: rgba(255, 0, 0, 0.178) !important;
+    color: black !important;
+}
+
+/* responsive */
+@media (max-width: 1060px) {
+    .tms-top-btns {
+        -webkit-box-orient: vertical !important;
+        -moz-box-orient: vertical !important;
+        -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .tms-top-btns .date-nav {
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        -ms-flex-order: 2;
+        -webkit-order: 2;
+        order: 2;
+        margin-left: 0 !important;
+    }
+    .tms-top-btns .action-btns {
+        margin: 10px 0 10px 0 !important;    
+    }
+    
+}
+@media (min-width: 1080px) {
+    .calendar-month .container {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width: 779px) {
+    .calendar-day .container, .calendar-week .container {
+        flex-direction: column-reverse !important;
+        align-items: center;
+    }
+    .calendar-day .summary table th, .calendar-day .modification table th {
+        width: 300px !important;
+    }
+    .calendar-day .mt-12, .calendar-week .mt-12 {
+        margin-left: 0 !important;
+        margin-top: 25px !important;
+    }
+}
+@media (max-width: 700px) {
+    .add-timesheet-modal .modal-dialog,
+    .day-in-month-modal .modal-dialog {
+        width: 95% !important;
+    }
+}
+@media (max-width: 440px) {
+    .day-in-month-modal .modal-dialog table {
+        width: 95% !important;
+    }
+}

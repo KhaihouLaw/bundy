@@ -1,0 +1,24 @@
+/*
+ * Add Leave Request
+ */
+
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 2px solid blue;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: blue;
+}
+
+@media only screen and (max-width: 400px) {
+    .leave-request-root .buttons-cont {
+        padding-right: 0 !important;
+    }
+}
